@@ -1,15 +1,16 @@
 <template>
-  <div>トップページです</div>
+  <div id="home">
+    <router-link :to="`dynamic-route-matching/${userId}`">DynamicRouteMatching.vueへ
+      </router-link>
+      </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
+  data(){
+    return{
+      userId:'1c10db36-a600-ad36-dc46-da001fc3cc13'
+    }
   }
 }
 </script>

@@ -1,10 +1,23 @@
 <template>
   <div id="app">
-    <router-link v-bind:to="{name:'Home'}">トップページ</router-link>
-    <router-link v-bind:to="{name:'UserList'}">ユーザー一覧ページ</router-link>
+    <router-link @click="topPage">トップページ</router-link>
+    <router-link @click="userListPage">ユーザー一覧ページ</router-link>
     <router-view></router-view>
   </div>
 </template>
+
+<script>
+export default {
+  methods:{
+    topPage(){
+      this.$router.push({name:'Home'});
+    },
+    userListPage(){
+      this.$router.push({name:'UserList'});
+    }
+  }
+}
+</script>
 
 <style>
 #app {

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import UserList from '../views/UserList.vue'
+import DynamicRouteMatching from '../views/DynamicRouteMatching.vue'
 
 Vue.use(VueRouter)
 
@@ -9,12 +9,13 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
   },
   {
-    path: '/user-list',
-    name: 'UserList',
-    component: UserList
+    path: '/dynamic-route-matching/:userId',
+    name: 'DynamicRouteMatching',
+    component: DynamicRouteMatching,
+    props:true//値を渡すことを許可
   }
 ]
 
