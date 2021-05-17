@@ -12,10 +12,9 @@ const routes = [
     component: Home,
   },
   {
-    path: '/dynamic-route-matching/:userId',
+    path: '/dynamic-route-matching',
     name: 'DynamicRouteMatching',
     component: DynamicRouteMatching,
-    props:true//値を渡すことを許可
   }
 ]
 

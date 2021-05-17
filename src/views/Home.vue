@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <router-link :to="`dynamic-route-matching/${userId}`">DynamicRouteMatching.vueへ
+    <router-link :to="{path:'/dynamic-route-matching',query:{userId:userId}}">DynamicRouteMatching.vueへ
       </router-link>
       </div>
 </template>

@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <router-link @click="topPage">トップページ</router-link>
-    <router-link @click="userListPage">ユーザー一覧ページ</router-link>
+    <button @click="topPage">トップページ</button>
+    <button @click="subPage">サブページ</button>
+    <button @click="userListPage">ユーザー一覧ページ</button>
     <router-view></router-view>
   </div>
 </template>
@@ -12,8 +13,11 @@ export default {
     topPage(){
       this.$router.push({name:'Home'});
     },
+    subPage(){
+      this.$router.push({name:'SubPage'});
+    },
     userListPage(){
-      this.$router.push({name:'UserList'});
+      this.$router.push({name:'UserList',query:{redirect:true}});
     }
   }
 }

@@ -4,6 +4,10 @@
 
 <script>
 export default{
-  props:['userId']//値の受け取りそのままプロパティとして扱うことができる。
+  data(){
+    return{
+      userId:this.$route.query.userId//$routeオブジェクトを利用してqueryの値を取り出せる
+    }
+  }
 }
 </script>
